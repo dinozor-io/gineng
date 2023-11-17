@@ -1,6 +1,8 @@
 package gineng
 
 import (
+	"net/http"
+
 	"github.com/dinozor-io/consts/methods"
 	"github.com/dinozor-io/interfaces"
 	"github.com/gin-gonic/gin"
@@ -23,6 +25,7 @@ func (e *Engine) Run() {
 	for i := 0; i < len(routes); i++ {
 
 		callback := routes[i].Callback()
+		group := routes[i].Group()
 
 		if methods.GET == routes[i].Method() {
 			e.gin.GET(routes[i].Path(), func(c *gin.Context) {
@@ -35,6 +38,11 @@ func (e *Engine) Run() {
 				res.Init(contr)
 
 				contr.Init(req, res)
+
+				if !group.CheckCond(contr) {
+					c.JSON(http.StatusForbidden, map[string]any{})
+					return
+				}
 
 				callback(contr)
 
