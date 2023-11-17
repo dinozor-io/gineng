@@ -3,8 +3,8 @@ module github.com/dinozor-io/gineng
 go 1.20
 
 require (
-	github.com/dinozor-io/consts v0.0.0-00010101000000-000000000000
-	github.com/dinozor-io/interfaces v0.0.0-00010101000000-000000000000
+	github.com/dinozor-io/consts v0.0.0-20231117120726-5c8cd3ad877b
+	github.com/dinozor-io/interfaces v0.0.0-20231117133454-5245e871e389
 	github.com/gin-gonic/gin v1.9.1
 )
 

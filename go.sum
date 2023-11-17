@@ -7,6 +7,10 @@ github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311/go.mod h1:b583j
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/dinozor-io/consts v0.0.0-20231117120726-5c8cd3ad877b h1:SdsSmcWierthkRzxmCw2N3bbLTRtGcIreXxL2HBEsGc=
+github.com/dinozor-io/consts v0.0.0-20231117120726-5c8cd3ad877b/go.mod h1:AgXPGddGIjCySuQYfuGcs3mV+07l+qsxIrs3lKEdtlA=
+github.com/dinozor-io/interfaces v0.0.0-20231117133454-5245e871e389 h1:WjybO5BxtHcuxbcjoliuQieOCiz6ZBXf78zPjHxN6Do=
+github.com/dinozor-io/interfaces v0.0.0-20231117133454-5245e871e389/go.mod h1:dY9l9Jds6kAlPDWtSBB2BFjDDzLEK1LkgmcgAWrP8CI=
 github.com/gabriel-vasile/mimetype v1.4.2 h1:w5qFW6JKBz9Y393Y4q372O9A7cUSequkh1Q7OhCmWKU=
 github.com/gabriel-vasile/mimetype v1.4.2/go.mod h1:zApsH/mKG4w07erKIaJPFiX0Tsq9BFQgN3qGY5GnNgA=
 github.com/gin-contrib/sse v0.1.0 h1:Y/yl/+YNO8GZSjAhjMsSuLt29uWRFHdHYUb5lYOV9qE=
