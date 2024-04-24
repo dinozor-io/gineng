@@ -2,8 +2,10 @@ package gineng
 
 import (
 	"net/http"
+	"os"
 
 	"github.com/dinozor-io/consts/methods"
+	"github.com/dinozor-io/consts/resptype"
 	"github.com/dinozor-io/interfaces"
 	"github.com/gin-gonic/gin"
 )
@@ -46,7 +48,18 @@ func (e *Engine) Run() {
 
 				callback(contr)
 
-				c.JSON(res.StatusCode(), res.Data())
+				if res.Type() == resptype.JSON {
+					c.JSON(res.StatusCode(), res.Data())
+				} else if res.Type() == resptype.HTML {
+					bytes, e := os.ReadFile(res.path)
+
+					if e != nil {
+						c.Data(http.StatusNotFound, "text/html", []byte("Not Found"))
+						return
+					}
+
+					c.Data(res.StatusCode(), "text/html", bytes)
+				}
 			})
 		}
 	}
